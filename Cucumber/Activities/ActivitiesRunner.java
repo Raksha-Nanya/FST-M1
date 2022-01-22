@@ -9,8 +9,8 @@ import io.cucumber.junit.CucumberOptions;
     features = "src/test/java/Features",
     glue = {"stepDefintions"},
     plugin = {"pretty","html:target/cucumber-reports/reports" },
-    monochrome = true,
-    tags = "@activity5"
+    monochrome = true
+    //tags = "@activity5"
 )
 
 public class ActivitiesRunner {
