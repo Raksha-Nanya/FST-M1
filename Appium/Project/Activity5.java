@@ -40,7 +40,7 @@ public class Activity5 {
       
   }
 
-  @Test
+  @Test(priority=0)
   public void validLogin() throws InterruptedException {
 	  driver.get("https://www.training-support.net/selenium");
 	  driver.findElementByXPath("//android.widget.Button[@text='Login']").click();
@@ -55,7 +55,7 @@ public class Activity5 {
 	  
 	  
 	  }
-  
+  @Test((priority=1)
   public void inalidLogin() throws InterruptedException {
 	  driver.get("https://www.training-support.net/selenium");
 	  driver.findElementByXPath("//android.widget.Button[@text='Login']").click();
@@ -66,7 +66,7 @@ public class Activity5 {
 	  
 	  MobileElement message = driver.findElementByXPath("//android.view.View/android.view.View[2]/android.view.View[2]");
 	  
-	  Assert.assertEquals(message.getText(), "");
+	  Assert.assertEquals(message.getText(), "Something went wrong.");
 	  
 	  
 	  }
